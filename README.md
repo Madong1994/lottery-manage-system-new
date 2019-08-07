@@ -56,7 +56,7 @@
 
 ## 安装步骤 ##
 ```
-git clone https://github.com/lin-xin/lottery-manage-system.git      // 把模板下载到本地
+git clone git@github.com:Madong1994/lottery-manage-system.git      // 把模板下载到本地
 cd lottery-manage-system    // 进入模板目录
 npm install         // 安装项目依赖，等待安装完成之后，安装失败可用 cnpm 或 yarn
 
