@@ -73,70 +73,7 @@
   </div>
 </template>
 <style>
-.debug {
-  border: 1px solid red;
-}
 
-.ms-layout-center-wrap-horizontal {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  justify-content: center;
-  align-items: center;
-}
-.width-130-height-156 {
-  width: 130px;
-  height: 156px;
-}
-.ms-layout-start-horizontal {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-
-  justify-content: start;
-  align-items: center;
-}
-.ms-layout-wrap-vertical {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-
-  justify-content: space-around;
-  align-items: center;
-}
-.margin-bottom-20 {
-  margin-bottom: 20px;
-}
-.margin-left-20 {
-  margin-left: 20px;
-}
-.el-row {
-  margin-bottom: 20px;
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-.el-col {
-  border-radius: 4px;
-}
-.bg-purple-dark {
-  background: #99a9bf;
-}
-.bg-purple {
-  background: #d3dce6;
-}
-.bg-purple-light {
-  background: #e5e9f2;
-}
-.grid-content {
-  border-radius: 4px;
-  min-height: 36px;
-}
-.row-bg {
-  padding: 10px 0;
-  background-color: #f9fafc;
-}
 </style>
 
 <script>
