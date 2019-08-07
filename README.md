@@ -15,13 +15,6 @@
     <img src="https://img.shields.io/badge/%24-donate-ff69b4.svg" alt="donate">
   </a>
 
-基于Vue.js + Element UI 的后台管理系统解决方案。[线上地址](http://blog.gdfengshuo.com/example/work/)
-
-本项目基于vue-cli3构建，如果是vue-cli2的请下载[旧版本V3.2.0](https://github.com/lin-xin/vue-manage-system/releases/tag/V3.2.0)
-
-> React + Ant Design 的版本正在开发中，仓库地址：[react-manage-system](https://github.com/lin-xin/react-manage-system)
-
-[English document](https://github.com/lin-xin/manage-system/blob/master/README_EN.md)
 
 ## 项目截图 ##
 ### 登录
