@@ -11,9 +11,10 @@
     <div class="container">
       <el-row>
         <div>
-          <el-button @click="addSponsor" type="primary" round>
+          <!-- <el-button @click="addSponsor" type="primary" round>
             <i class="el-icon-lx-add"></i> 新增
-          </el-button>
+          </el-button> -->
+          <router-link :to="{ path: '/addsponsor'}" replace type="primary" round ><i class="el-icon-lx-add"></i> 新增</router-link>
           <el-divider direction="vertical"></el-divider>
           <el-button type="success" round>
             <i class="el-icon-lx-search"></i> 个人
@@ -68,12 +69,26 @@
     </el-drawer>
     <!-- 新增赞助商 -->
     <el-drawer title="新增赞助商" :visible.sync="addDrawer" :direction="direction">
-      <div class="debug ms-layout-wrap-vertical" style="width:100%;height:100%"></div>
+      <div class="debug ms-layout-wrap-vertical" style="width:100%;height:100%">
+        <div class="ms-layout-wrap-vertical sm-width-100-per sm-height-10-per">
+          <el-form label-width="80px" :model="formLabelAlign">
+            <el-form-item label="名称">
+              <el-input v-model="formLabelAlign.name"></el-input>
+            </el-form-item>
+            <el-form-item label="活动区域">
+              <el-select v-model="formLabelAlign.region" placeholder="活动区域">
+                <el-option label="区域一" value="shanghai"></el-option>
+                <el-option label="区域二" value="beijing"></el-option>
+              </el-select>
+            </el-form-item>
+          </el-form>
+        </div>
+        <div class="ms-layout-wrap-vertical sm-width-100-per sm-height-90-per"></div>
+      </div>
     </el-drawer>
   </div>
 </template>
 <style>
-
 </style>
 
 <script>
@@ -85,13 +100,18 @@ export default {
       value: "已开启",
       drawer: false,
       addDrawer: false,
-      direction: "rtl"
+      direction: "rtl",
+      formLabelAlign: {
+          name: '',
+          region: '',
+          type: ''
+        }
     };
   },
   methods: {
     addSponsor: function() {
-        this.$data.addDrawer = true;
-        console.log(this.addDrawer)
+      this.$data.addDrawer = true;
+      console.log(this.addDrawer);
     }
   }
 };

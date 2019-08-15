@@ -55,6 +55,14 @@
                             {
                                 index: 'sponsor',
                                 title: 'sponsor'
+                            },
+                            // {
+                            //     index: 'addsponsor',
+                            //     title: 'add1sponsor'
+                            // },
+                            {
+                                index: 'sponsortype',
+                                title: 'sponsorType'
                             }
                         ]
                     },

@@ -30,6 +30,17 @@ export default new Router({
                     meta: { title: '赞助商' }
                 },
                 {
+                    // markdown组件
+                    path: '/addsponsor',
+                    component: resolve => require(['../components/lottery/addSponsor.vue'], resolve),
+                    meta: { title: '新增赞助商' }    
+                },
+                {
+                    path: '/sponsortype',
+                    component: resolve => require(['../components/lottery/SponsorType.vue'], resolve),
+                    meta: { title: '赞助商类型' }
+                },
+                {
                     path: '/icon',
                     component: resolve => require(['../components/page/Icon.vue'], resolve),
                     meta: { title: '自定义图标' }
