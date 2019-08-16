@@ -22,7 +22,7 @@
         <el-form-item label="奖品名称" prop="title" placeholder="请输入奖品名称">
           <el-input v-model="ruleForm.title"></el-input>
         </el-form-item>
-        <el-form-item label="奖品数量" prop="count" placeholder="请输入奖品金额">
+        <el-form-item label="奖品金额" prop="count" placeholder="请输入奖品金额">
           <el-input v-model="ruleForm.count"></el-input>
         </el-form-item>
         <el-form-item label="奖品图片">
@@ -47,14 +47,14 @@ export default {
   name: "editor",
   data() {
     return {
-      imgUrl: "",
+      imgUrl: this.$route.query.imgUrl,
       ruleForm: {
-        title: "",
-        count: ""
+        title: this.$route.query.title,
+        count: this.$route.query.count
       },
       rules: {
         title: [{ required: true, message: "请输入活动名称", trigger: "blur" }],
-        count: [{ required: true, message: "请输入奖品数量", trigger: "blur" }]
+        count: [{ required: true, message: "请输入奖品金额", trigger: "blur" }]
       }
     };
   },

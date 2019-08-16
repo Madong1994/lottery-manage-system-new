@@ -52,6 +52,11 @@ export default new Router({
                     meta: { title: '新增奖品' }
                 },
                 {
+                    path: '/editPrize',
+                    component: resolve => require(['../components/lottery/EditPrize.vue'], resolve),
+                    meta: { title: '编辑奖品' }
+                },
+                {
                     path: '/icon',
                     component: resolve => require(['../components/page/Icon.vue'], resolve),
                     meta: { title: '自定义图标' }
