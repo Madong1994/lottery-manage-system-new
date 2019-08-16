@@ -29,6 +29,7 @@ export default new Router({
                     component: resolve => require(['../components/lottery/Sponsor.vue'], resolve),
                     meta: { title: '赞助商' }
                 },
+
                 {
                     // markdown组件
                     path: '/addsponsor',
@@ -39,6 +40,16 @@ export default new Router({
                     path: '/sponsortype',
                     component: resolve => require(['../components/lottery/SponsorType.vue'], resolve),
                     meta: { title: '赞助商类型' }
+                },
+                {
+                    path: '/prize',
+                    component: resolve => require(['../components/lottery/Prize.vue'], resolve),
+                    meta: { title: '奖品' }
+                },
+                {
+                    path: '/addPrize',
+                    component: resolve => require(['../components/lottery/AddPrize.vue'], resolve),
+                    meta: { title: '新增奖品' }
                 },
                 {
                     path: '/icon',
