@@ -13,16 +13,14 @@
         <el-form ref="form" :model="form" label-width="80px">
           <el-divider content-position="left">赞助商</el-divider>
           <div class="width-250-height-156-px sm-layout-left-center">
-            <div class="sm-layout-side-vertical" style="height:60%;width:40%">
-              <div class="sm-layout-center-horizontal-with-wrap" style="width: 100%;height:50%">
-                <el-button @click="addSponsor" type="success" round>
-                  <i class="el-icon-lx-searchlist"></i> 个人
-                </el-button>
-              </div>
-              <div class="sm-layout-center-horizontal-with-wrap" style="width: 100%;height:50%">
-                <el-button @click="addSponsor" type="info" round>
-                  <i class="el-icon-lx-searchlist"></i> 商户
-                </el-button>
+            <div class="sm-layout-top-center" style="height:100%;width:40%">
+              <div class="ms-layout-wrap-vertical" style="width: 100%;height:20%">
+                <el-button
+                  @click="addSponsor"
+                  type="primary"
+                  icon="el-icon-circle-plus-outline"
+                  round
+                >添加赞助商</el-button>
               </div>
             </div>
             <div class="ms-layout-wrap-vertical" style="height:100%;width:40%">
@@ -33,41 +31,47 @@
           </div>
 
           <el-divider content-position="left">奖品设置</el-divider>
-          <el-form-item label="日期时间">
-            <el-col :span="11">
-              <el-date-picker
-                type="date"
-                placeholder="选择日期"
-                v-model="form.date1"
-                style="width: 100%;"
-              ></el-date-picker>
-            </el-col>
-            <el-col class="line" :span="2">-</el-col>
-            <el-col :span="11">
-              <el-time-picker placeholder="选择时间" v-model="form.date2" style="width: 100%;"></el-time-picker>
-            </el-col>
-          </el-form-item>
-          <el-form-item label="城市级联">
-            <el-cascader :options="options" v-model="form.options"></el-cascader>
-          </el-form-item>
-          <el-form-item label="选择开关">
-            <el-switch v-model="form.delivery"></el-switch>
-          </el-form-item>
-          <el-form-item label="多选框">
-            <el-checkbox-group v-model="form.type">
-              <el-checkbox label="步步高" name="type"></el-checkbox>
-              <el-checkbox label="小天才" name="type"></el-checkbox>
-              <el-checkbox label="imoo" name="type"></el-checkbox>
-            </el-checkbox-group>
-          </el-form-item>
-          <el-form-item label="单选框">
-            <el-radio-group v-model="form.resource">
-              <el-radio label="步步高"></el-radio>
-              <el-radio label="小天才"></el-radio>
-              <el-radio label="imoo"></el-radio>
-            </el-radio-group>
-          </el-form-item>
-          <el-divider content-position="left">广告设置</el-divider>
+
+          <div class="sm-layout-top-center-with-wrap" style="width:650px">
+            <div class="sm-width-80-per">
+              <el-carousel :interval="5000" arrow="always" class type="card" height="200px">
+                <el-carousel-item v-for="item in 4" :key="item">
+                  <h3>{{ item }}</h3>
+                </el-carousel-item>
+              </el-carousel>
+            </div>
+
+            <div class="sm-width-80-per sm-layout-left-center">
+              <div class="sm-layout-top-center">
+                <el-tag type="info">一等奖 纸包鱼 * 3</el-tag>
+                <el-button
+                  class="sm-margin-top-1rem"
+                  @click="addSponsor"
+                  type="primary"
+                  icon="el-icon-circle-plus-outline"
+                  round
+                >添加奖品</el-button>
+              </div>
+            </div>
+          </div>
+
+          <el-divider content-position="left">开奖条件</el-divider>
+          <div class="sm-layout-left-center" style="height:56px;">
+            <div class="sm-layout-right-center" style="height:100%;">
+              <el-button
+                class="sm-margin-left-2rem"
+                @click="addSponsor"
+                type="primary"
+                icon="el-icon-circle-plus-outline"
+                round
+              >添加开奖条件</el-button>
+              <el-tag class="sm-margin-left-1rem" type="info">2019-08-07 14:22:15 自动开奖</el-tag>
+            </div>
+          </div>
+
+          <el-divider content-position="left">参与要求</el-divider>
+          <el-divider content-position="left">地址</el-divider>
+          <el-divider content-position="left">赞助商简介</el-divider>
           <el-form-item label="文本框">
             <el-input type="textarea" rows="5" v-model="form.desc"></el-input>
           </el-form-item>
@@ -84,6 +88,21 @@
 .width-80-height-100-px {
   width: 80px;
   height: 100px;
+}
+.el-carousel__item h3 {
+  color: #475669;
+  font-size: 18px;
+  opacity: 0.75;
+  line-height: 200px;
+  margin: 0;
+}
+
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n + 1) {
+  background-color: #d3dce6;
 }
 </style>
 
