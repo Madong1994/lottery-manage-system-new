@@ -70,7 +70,24 @@
           </div>
 
           <el-divider content-position="left">参与要求</el-divider>
+          <div class="debug sm-layout-right-center "  style="height:156px;">
+            <!-- <el-form-item label="文本框"> -->
+            <el-input type="textarea" rows="6" style="width:420px"></el-input>
+          <!-- </el-form-item> -->
+          </div>
           <el-divider content-position="left">地址</el-divider>
+          <div class="sm-layout-left-center" style="height:56px;">
+            <div class="sm-layout-right-center" style="height:100%;">
+              <el-button
+                class="sm-margin-left-2rem"
+                @click="addSponsor"
+                type="primary"
+                icon="el-icon-circle-plus-outline"
+                round
+              >添加地址</el-button>
+              <el-tag class="sm-margin-left-1rem" type="info">2019-08-07 14:22:15 自动开奖</el-tag>
+            </div>
+          </div>
           <el-divider content-position="left">赞助商简介</el-divider>
           <el-form-item label="文本框">
             <el-input type="textarea" rows="5" v-model="form.desc"></el-input>
